@@ -1,18 +1,29 @@
 <template>
-    <form @submit.prevent="handleSubmit">
+<v-card  
+ class="mx-auto "
+ style="opacity: 1 !important; background-color:#121D4D  "
+max-width="500"
+
+>
+<div class="container">
+    
+    <form class="form-signin" style="margin-top: 350px" @submit.prevent="handleSubmit">
          <div v-if="message" class="alert alert-succes" role="alert">
             {{message}}
         </div>
         <Error  v-if="error" :error="error"/>
-        <h3> ¿Olvidaste la contraseña? </h3>
         <br>
+        <h4> ¿Olvidaste la contraseña? </h4>
+       
         <div class="form-group">
-            <label>Email</label>
+            <label style="font-size:25px">Email</label>
             <input type="email" v-model="email" class="form-control" placeholder="Email"/>
         </div>
         <br>
-        <button class="btn btn-primary btn-block">Submit</button>
+        <button class="btn btn-primary btn-block">Restablecer Contraseña</button>
     </form>
+</div>
+</v-card>
 </template>
 <script>
 import axios from 'axios'

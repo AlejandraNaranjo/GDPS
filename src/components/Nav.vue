@@ -3,24 +3,17 @@
 <nav class="navbar navbar-expand navbar-light fixed-top">
 <div class="container">
     <div class="container-fluid fadeIn" align="center"> 
-    <router-link to ="/"> <img  style="width:80%;  min-width: 300px; "  src="../assets/bannertec.png"> </router-link>
+    <img  style="width:80%;  min-width: 300px; "  src="../assets/bannertec.png"> 
 
     </div>
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav ml-auto" v-if="!user">
-      <li class="nav-item">
-        <router-link to="/login" class="nav-link"> Login</router-link>
+  <div class="collapse navbar-collapse" >
+    <ul class="navbar-nav ml-auto"  v-if="!user">
+      <li class="nav-item" style="font-size:25px">
+        <router-link to="/login" class="nav-link"> Iniciar Sesión</router-link>
       </li>
-      <li class="nav-item">
+      <!--li class="nav-item">
         <router-link to="/register" class="nav-link"> Sign up</router-link>
-      </li>
-    </ul>
-  </div>
-<div>
-     <ul class="navbar-nav ml-auto" v-if="user">
-      <li class="nav-item">
-        <a href="javascript:void(0)" @click="handleClick" class="nav-link"> Logout</a>
-      </li>
+      </li-->
     </ul>
   </div>
 </div>

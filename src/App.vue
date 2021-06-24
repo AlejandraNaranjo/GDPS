@@ -1,12 +1,12 @@
 <template>
-<div id="app">
+<div id="app" >
    
   <Nav >
    
   </Nav>
   
-   <div class="auth-wrapper">
-  <div class="auth-inner">
+   <div  >
+  <div  >
 <router-view />
   </div>
 </div>
@@ -35,11 +35,49 @@ Nav
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500.600,700,800');
-*{
+
+body{
+  background:url(https://images.unsplash.com/photo-1552083940-86877723de7a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGFic3RyYWN0fGVufDB8fDB8Ymx1ZXw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)   !important ;
+  min-height: 100vh;
+  display: flex;
+  font-weight:400;
+  font-family: 'Fira Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,label, span{
+  font-weight: 500;
+  font-family: 'Fira Sans', sans-serif;
+  color:yellow;
+  align-items: center;
+
+  
+  
+}
+#app{
+  text-align: center;
+   
+ 
+}
+body, html, #app{
+  width:100%;
+  height: 100%;
+  
+}
+.navbar-light{
+background-color: #ffffff ;
+/*box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);*/
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 5px;
+  margin: auto;
+}
+
+/**{
   box-sizing: border-box;
 }
 body{
-  background:#ffffff   !important;
+  background:#url(https://images.unsplash.com/photo-1552083940-86877723de7a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGFic3RyYWN0fGVufDB8fDB8Ymx1ZXw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)   !important ;
   min-height: 100vh;
   display: flex;
   font-weight:400;
@@ -49,6 +87,7 @@ body{
 h1,h2,h3,h4,h5,h6,label, span{
   font-weight: 500;
   font-family: 'Fira Sans', sans-serif;
+  color:yellow;
 }
 body, html, #app, #root, .auth-wrapper{
   width:100%;
@@ -61,7 +100,7 @@ body, html, #app, #root, .auth-wrapper{
 .navbar-light{
 background-color: #ffffff ;
 /*box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);*/
-}
+/*}
 .form-signin {
   width: 100%;
   max-width: 330px;
@@ -135,19 +174,7 @@ auth-wrapper h3{
 }
 .forgot-password a{
   color: #167bff;
-}
+}*/
 </style>
 
-<!--template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-    
-    </div>
-    <router-view/>
-  </div>
-</template>
 
-<style lang="stylus">
-
-</style>-->
