@@ -17,3 +17,12 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Compile laravel-api (Back-end for login)
+First download composer
+Second Run from terminal in laravel-api folder
+php artisan config:clear
+php artisan cache:clear
+php artisan serve --port 8002 
+
+### After execute vue ui
