@@ -1,70 +1,70 @@
 <template>
-<div id="app" >
-   
-  <Nav >
-   
-  </Nav>
-  
-   <div  >
-  <div  >
-<router-view />
+  <div id="app">
+    <Nav> </Nav>
+
+    <div>
+      <div>
+        <router-view />
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </template>
 
 <script>
-import Nav from './components/Nav.vue'
-import axios from 'axios'
+import Nav from "./components/Nav.vue";
+import axios from "axios";
 export default {
-  name: 'App',
-  components :{
-Nav
+  name: "App",
+  components: {
+    Nav,
   },
-    
-   async created(){
-        const response = await axios.get('/api/user');
-        
-      this.$store.dispatch('user', response.data);
-        
-    }
-    
-  
-}
+
+  async created() {
+    const response = await axios.get("/api/user");
+
+    this.$store.dispatch("user", response.data);
+  },
+};
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500.600,700,800');
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500.600,700,800");
 
-body{
-  background:url(https://images.unsplash.com/photo-1552083940-86877723de7a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGFic3RyYWN0fGVufDB8fDB8Ymx1ZXw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60)   !important ;
+.app {
+  background: url(https://images.unsplash.com/photo-1552083940-86877723de7a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGFic3RyYWN0fGVufDB8fDB8Ymx1ZXw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60) !important ;
+}
+body {
+  background: url(https://images.unsplash.com/photo-1552083940-86877723de7a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fGFic3RyYWN0fGVufDB8fDB8Ymx1ZXw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60) !important ;
   min-height: 100vh;
   display: flex;
-  font-weight:400;
-  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-family: "Fira Sans", sans-serif;
 }
-h1,h2,h3,h4,h5,h6,label, span{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+span {
   font-weight: 500;
-  font-family: 'Fira Sans', sans-serif;
-  color:yellow;
+  font-family: "Fira Sans", sans-serif;
+  color: yellow;
   align-items: center;
-
-  
-  
 }
-#app{
+#app {
   text-align: center;
-   
- 
 }
-body, html, #app{
-  width:100%;
+body,
+html,
+#app {
+  width: 100%;
   height: 100%;
-  
 }
-.navbar-light{
-background-color: #ffffff ;
-/*box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);*/
+.navbar-light {
+  background-color: #ffffff;
+  /*box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);*/
 }
 .form-signin {
   width: 100%;
